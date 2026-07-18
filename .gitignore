@@ -1,0 +1,10 @@
+.deps/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+data/raw/
+data/processed/
+artifacts/private/
+*.zip
+*.csv

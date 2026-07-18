@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "speed-dating-connection"
+version = "0.1.0"
+description = "Leakage-safe replication of profile similarity versus interaction perception"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Triet Pham"}]
+dependencies = []
+
+[project.optional-dependencies]
+model = [
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "xgboost>=2.1",
+]
+dev = ["pytest>=8.3", "ruff>=0.7"]
+
+[project.scripts]
+speed-dating-connection = "speed_dating_connection.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/speed_dating_connection"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".deps", ".venv", "data", "artifacts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,183 @@
+{
+  "banned_predictors": [
+    "dec",
+    "dec_o",
+    "match_es",
+    "you_call",
+    "them_cal",
+    "date_3"
+  ],
+  "delta_full_vs_perceived_traits": {
+    "average_precision": 0.06759952540843789,
+    "roc_auc": 0.027314125471510797
+  },
+  "delta_full_vs_profile_similarity": {
+    "average_precision": 0.3667682181880037,
+    "roc_auc": 0.31245553735689247
+  },
+  "delta_full_vs_reciprocity": {
+    "average_precision": 0.04916138520867702,
+    "roc_auc": 0.014343855469525657
+  },
+  "delta_full_vs_shared_interest": {
+    "average_precision": 0.1879067058369278,
+    "roc_auc": 0.12736437859837213
+  },
+  "delta_reciprocity_vs_shared_interest": {
+    "average_precision": 0.1387453206282508,
+    "cluster_bootstrap_95": {
+      "average_precision": {
+        "iterations": 5000,
+        "lower_95": 0.07967998002024737,
+        "upper_95": 0.19371697226415224
+      },
+      "roc_auc": {
+        "iterations": 5000,
+        "lower_95": 0.08294430146444919,
+        "upper_95": 0.14765226711857377
+      }
+    },
+    "roc_auc": 0.11302052312884647
+  },
+  "dyads": 4194,
+  "evaluation": "5-fold stratified group holdout by wave",
+  "feature_sets": {
+    "full": [
+      "interest_correlation",
+      "same_race",
+      "age_gap",
+      "shared_interest_mean",
+      "shared_interest_balance",
+      "like_mean",
+      "like_balance",
+      "expected_reciprocation_mean",
+      "expected_reciprocation_balance",
+      "attractiveness_mean",
+      "attractiveness_balance",
+      "sincerity_mean",
+      "sincerity_balance",
+      "intelligence_mean",
+      "intelligence_balance",
+      "fun_mean",
+      "fun_balance",
+      "ambition_mean",
+      "ambition_balance"
+    ],
+    "perceived_traits": [
+      "attractiveness_mean",
+      "attractiveness_balance",
+      "sincerity_mean",
+      "sincerity_balance",
+      "intelligence_mean",
+      "intelligence_balance",
+      "fun_mean",
+      "fun_balance",
+      "ambition_mean",
+      "ambition_balance"
+    ],
+    "profile_similarity": [
+      "interest_correlation",
+      "same_race",
+      "age_gap"
+    ],
+    "reciprocity": [
+      "like_mean",
+      "like_balance",
+      "expected_reciprocation_mean",
+      "expected_reciprocation_balance"
+    ],
+    "shared_interest": [
+      "interest_correlation",
+      "shared_interest_mean",
+      "shared_interest_balance"
+    ]
+  },
+  "models": {
+    "full": {
+      "gain_importance": {
+        "age_gap": 0.028553875628858805,
+        "ambition_balance": 0.023892876226454973,
+        "ambition_mean": 0.024640394374728203,
+        "attractiveness_balance": 0.04274624865502119,
+        "attractiveness_mean": 0.07580255810171366,
+        "expected_reciprocation_balance": 0.027911019511520863,
+        "expected_reciprocation_mean": 0.05367438495159149,
+        "fun_balance": 0.03331666300073266,
+        "fun_mean": 0.0966094471514225,
+        "intelligence_balance": 0.027432934381067753,
+        "intelligence_mean": 0.028465396724641323,
+        "interest_correlation": 0.026381177362054586,
+        "like_balance": 0.04257479542866349,
+        "like_mean": 0.3270101919770241,
+        "same_race": 0.024101407499983907,
+        "shared_interest_balance": 0.027941003441810608,
+        "shared_interest_mean": 0.036794230341911316,
+        "sincerity_balance": 0.025802418123930693,
+        "sincerity_mean": 0.0263489936478436
+      },
+      "metrics": {
+        "average_precision": 0.5467389200916584,
+        "brier_score": 0.14586539746398863,
+        "roc_auc": 0.8482698861756337
+      }
+    },
+    "perceived_traits": {
+      "gain_importance": {
+        "ambition_balance": 0.04811559617519379,
+        "ambition_mean": 0.04355776682496071,
+        "attractiveness_balance": 0.07517380267381668,
+        "attractiveness_mean": 0.2504156231880188,
+        "fun_balance": 0.07300916686654091,
+        "fun_mean": 0.29085318371653557,
+        "intelligence_balance": 0.05528881587088108,
+        "intelligence_mean": 0.0615822309628129,
+        "sincerity_balance": 0.049345728009939194,
+        "sincerity_mean": 0.05265810526907444
+      },
+      "metrics": {
+        "average_precision": 0.4791393946832205,
+        "brier_score": 0.16382041536280142,
+        "roc_auc": 0.8209557607041229
+      }
+    },
+    "profile_similarity": {
+      "gain_importance": {
+        "age_gap": 0.3051753044128418,
+        "interest_correlation": 0.43243956565856934,
+        "same_race": 0.26238512992858887
+      },
+      "metrics": {
+        "average_precision": 0.17997070190365466,
+        "brier_score": 0.2442327039859172,
+        "roc_auc": 0.5358143488187412
+      }
+    },
+    "reciprocity": {
+      "gain_importance": {
+        "expected_reciprocation_balance": 0.07787449285387993,
+        "expected_reciprocation_mean": 0.20366720855236053,
+        "like_balance": 0.13384403847157955,
+        "like_mean": 0.5846142843365669
+      },
+      "metrics": {
+        "average_precision": 0.49757753488298134,
+        "brier_score": 0.16636199443925093,
+        "roc_auc": 0.833926030706108
+      }
+    },
+    "shared_interest": {
+      "gain_importance": {
+        "interest_correlation": 0.17954320460557938,
+        "shared_interest_balance": 0.18929489701986313,
+        "shared_interest_mean": 0.6311618983745575
+      },
+      "metrics": {
+        "average_precision": 0.35883221425473055,
+        "brier_score": 0.20093596573200953,
+        "roc_auc": 0.7209055075772616
+      }
+    }
+  },
+  "positives": 690,
+  "waves": 21
+}
